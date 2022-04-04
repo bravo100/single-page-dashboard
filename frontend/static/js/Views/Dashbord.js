@@ -5,8 +5,8 @@ import AbstractView from './AbstractView.js';
 export default class extends AbstractView {
 	constructor() {
 		super();
-    this.setTitle(`Dashbord`);
-		this.css(`/`);
+		this.setTitle(`Dashbord`);
+		this.css(`dash`);
 	}
 
 	async getHtml() {

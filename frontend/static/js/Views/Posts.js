@@ -6,7 +6,7 @@ export default class extends AbstractView {
 	constructor() {
 		super();
     this.setTitle(`Posts`);
-		this.css(`/posts`);
+		this.css(`posts`);
 	}
 
 	async getHtml() {

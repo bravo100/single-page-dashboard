@@ -10,15 +10,22 @@ export default class {
 	async getHtml() {
 		return ``;
 	}
-	
+
 	css(link) {
 		[...document.querySelectorAll(`.nav-link`)].forEach(nav => {
-			nav.addEventListener(`click`, () => {
-				[...document.querySelectorAll(`.nav-link`)].forEach(item =>
-					item.classList.remove(`active`),
-				);
+			nav.classList.remove(`active`);
 
-				if (nav.getAttribute(`href`).includes(link)) {
+			if (nav.classList.contains(link)) {
+				nav.classList.add(`active`);
+				console.log(nav);
+			}
+
+			nav.addEventListener(`click`, () => {
+				[...document.querySelectorAll(`.nav-link`)].forEach(item => {
+					item.classList.remove(`active`);
+				});
+
+				if (nav.classList.contains(link)) {
 					nav.classList.add(`active`);
 					console.log(nav);
 				}
