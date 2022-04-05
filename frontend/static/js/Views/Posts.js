@@ -5,7 +5,7 @@ import AbstractView from './AbstractView.js';
 export default class extends AbstractView {
 	constructor() {
 		super();
-    this.setTitle(`Posts`);
+		this.setTitle(`Posts`);
 		this.css(`posts`);
 	}
 
